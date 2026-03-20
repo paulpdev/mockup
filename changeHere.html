@@ -1,0 +1,77 @@
+// changeHere.html
+// Edit ONLY this file to rebrand the mock app (colors + logo).
+// `index.html` loads this as a script.
+
+window.COGNIGY_MOCK_THEME = (() => {
+  // ---- App text (optional) ----
+  const appName = "Policy Hub";
+  const productSubtitle = "Insurance dashboard";
+
+  // ---- Colors (main) ----
+  const brandPrimary = "#0A84FF";
+  const brandPrimaryDark = "#065EC0";
+  const brandAccent = "#22C55E";
+
+  // ---- Surfaces / text ----
+  const brandBg = "#F6F8FC";
+  const brandSurface = "#FFFFFF";
+  const brandText = "#0B1220";
+  const brandMuted = "#5B667A";
+  const brandBorder = "rgba(15, 23, 42, 0.12)";
+
+  // ---- Status pills ----
+  const successBg = "rgba(34, 197, 94, 0.10)";
+  const successText = "#15803D";
+  const warningBg = "rgba(245, 158, 11, 0.12)";
+  const warningText = "#B45309";
+
+  // ---- Logo (optional override) ----
+  // If you set `logoSrc` to your own URL/path, that logo will be used.
+  // If you leave it as null, the mock app uses the auto-generated default logo.
+  const logoSrc = null;
+
+  const defaultLogoSrc =
+    "data:image/svg+xml;utf8," +
+    encodeURIComponent(`
+      <svg xmlns="http://www.w3.org/2000/svg" width="240" height="48" viewBox="0 0 240 48">
+        <defs>
+          <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="${brandPrimary}"/>
+            <stop offset="1" stop-color="${brandAccent}"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="240" height="48" rx="14" fill="url(#g)" opacity="0.14"/>
+        <path d="M16 30V18h6.6c5.2 0 8.4 2.8 8.4 6c0 3.2-3.2 6-8.4 6H16Zm5-4h1.8c2 0 3.2-0.9 3.2-2s-1.2-2-3.2-2H21v4Z" fill="${brandText}"/>
+        <path d="M43 30c-5 0-8.7-3.2-8.7-6.6C34.3 19.8 38 17 43 17c4.5 0 7.6 2.3 7.6 5.8 0 .7-.1 1.4-.2 1.9H40.4c.3 1.2 1.6 2 3.2 2c1.2 0 2.2-.4 2.9-1l2.7 2.2c-1.4 1.6-3.5 2.1-6.2 2.1Zm-2.6-8.4h5.1c-.2-1-1.1-1.6-2.5-1.6c-1.4 0-2.4.6-2.6 1.6Z" fill="${brandText}"/>
+        <path d="M58.4 30V22h-3.2v-4H66v4h-3.2v8h-4.4Z" fill="${brandText}"/>
+        <path d="M77 30V17h4.5v5.1h5.2V17H91v13h-4.3v-4H81.5v4H77Z" fill="${brandText}"/>
+        <path d="M99 30V17h10.6v4h-6.3v1.1h5.9v3.3h-5.9v1.6h6.6v3.9H99Z" fill="${brandText}"/>
+        <path d="M124 30V17h4.5v13H124Zm-1-16.1c0-1.2 1-2.1 2.3-2.1c1.2 0 2.2.9 2.2 2.1s-1 2.1-2.2 2.1c-1.3 0-2.3-.9-2.3-2.1Z" fill="${brandText}"/>
+        <path d="M141.3 30c-5.1 0-8.7-3.2-8.7-6.6s3.6-6.4 8.7-6.4c5 0 8.2 2.8 8.2 6.2c0 .7-.1 1.4-.2 1.9h-10.2c.3 1.2 1.6 2 3.2 2c1.2 0 2.2-.4 2.9-1l2.7 2.2c-1.4 1.6-3.5 2.1-6.2 2.1Zm-2.6-8.4h5.1c-.2-1-1.1-1.6-2.5-1.6c-1.4 0-2.4.6-2.6 1.6Z" fill="${brandText}"/>
+      </svg>
+    `);
+
+  return {
+    appName,
+    productSubtitle,
+
+    brandPrimary,
+    brandPrimaryDark,
+    brandAccent,
+
+    brandBg,
+    brandSurface,
+    brandText,
+    brandMuted,
+    brandBorder,
+
+    successBg,
+    successText,
+    warningBg,
+    warningText,
+
+    // Use your own logo, or fall back to the generated one.
+    logoSrc: logoSrc || defaultLogoSrc,
+  };
+})();
+
